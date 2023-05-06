@@ -18,6 +18,7 @@ biomed/gb-2003-4-8-r50.txt:        orangutan indicated the inversion event was r
 biomed/gb-2003-4-8-r50.txt:          orangutan (
 biomed/gb-2003-4-8-r50.txt:          orangutan. BAC and PAC DNAs, isolated from bacterial
 ```
+
 In this usage of -r, I searched for the term "orangutan" in the biomed directory. It outputed the file path and the line contents where the term was found. Note that even if it is in the same file, it will simply restate the path of that file before stating the line with the term.
 
 ## grep -n "term" file
@@ -26,27 +27,30 @@ Wilson@DESKTOP-SCRO0UF MINGW64 ~/OneDrive/Desktop/UCSD/CSE 15L/stringsearch-data
 $ grep -n "relevant" biomed/1468-6708-3-1.txt
 12:        for relevant covariates [ 1 2 3 4 5 6 ] . All studies found
 ```
+
 -n will require the user to have a term they want to search and the path to a specific file. It will output the line number and the contents of that line for which the term appears. Here it shows that the term **relevant** was found in line 12 and beside it the line. This command is useful, as it gives you the line number where the term shows up so that you know where to start reading if you would like learn more about this term in particular. 
 ```
 Wilson@DESKTOP-SCRO0UF MINGW64 ~/OneDrive/Desktop/UCSD/CSE 15L/stringsearch-data/technical (main)
 $ grep -n "Introduction" biomed/1468-6708-3-1.txt
 5:        Introduction
 ```
+
 In this example, we looked into this file `biomed/1468-6708-3-1.txt` for the term **Introduction**. The output shows that there was only one match which was in line 5 and beside it shows the contents of that line number.
 
 ## grep -l "term" file(s)
-Output shows all the files that contain the words
 ```
 Wilson@DESKTOP-SCRO0UF MINGW64 ~/OneDrive/Desktop/UCSD/CSE 15L/stringsearch-data/technical (main)
 $ grep -l "orangutan" biomed/*
 biomed/gb-2003-4-8-r50.txt
 ```
+
 -l will look for files found in a directory for the term and output the files that contain that term. Here it shows the files that follow the pattern of `biomed/*` and contain the term **orangutan** are listed, in this case it was only one file. This is useful if you want to find files that cover or use a particular term, so that you can focus on these files.   
 ```
 Wilson@DESKTOP-SCRO0UF MINGW64 ~/OneDrive/Desktop/UCSD/CSE 15L/stringsearch-data/technical (main)
 $ grep -l "telomere fusion" biomed/*
 biomed/gb-2003-4-8-r50.txt
 ```
+
 This example is also similar to the first where it looks for the term **telemore fusion** in for files following the `biomed/*` pattern. It's output shows there is only one file with that pattern inside the biomed folder that has that term. 
 
 ## grep -C number "term" file
@@ -62,6 +66,7 @@ $ grep -C 3 "telomere fusion" biomed/gb-2003-4-8-r50.txt
         (HSA 1, 4, 5, 9, 12, 15, 16, 17, 18) [ 1 2 ] . The
         predominance of pericentric inversions between chimps and
 ```
+
 grep -C takes a number, the term you want and the file path you are searching. The number indicates how many lines above and below the line in which the term you are looking for is found in. So in this example, there are 7 lines, indicating that they found one line where the term was found and also gave 3 lines above and below that line. This is particularly useful as it helps give readers context as to how the word is being used. 
 ```
 Wilson@DESKTOP-SCRO0UF MINGW64 ~/OneDrive/Desktop/UCSD/CSE 15L/stringsearch-data/technical (main)
@@ -103,6 +108,7 @@ $ grep -C 3 "orangutan" biomed/gb-2003-4-8-r50.txt
           labeled by nick-translation with biotin and digoxigenin.
           FISH experiments were performed under standard conditions
 ```
+
 This example is similar, where it will output the lines above and below where the term **orangutan** is. Here it shows several iterations which can imply that the term is a significant point in this essay. 
 
 
