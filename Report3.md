@@ -1,5 +1,5 @@
 # Lab Report 3
-For these functions I used ChatGPT to give some command line operations for the grep function. 
+For these functions I used [ChatGPT](https://chat.openai.com/) to give some command line operations for the grep function. 
 ## grep -r "term" Directory
 ```
 Wilson@DESKTOP-SCRO0UF MINGW64 ~/OneDrive/Desktop/UCSD/CSE 15L/stringsearch-data/technical (main)
