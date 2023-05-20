@@ -1,14 +1,17 @@
 # Lab Report 3
-For these functions I used [ChatGPT](https://chat.openai.com/) to give some command line operations for the grep function. I gave two prompts for chatGPT to output which was "what are some command line operations for grep" and "show me more". The second command was done mainly because I wanted command line operations that were more different and applicable. Below are some screenshots of the output chatGPT gave (specifically the ones  that i used). 
+For these functions I used [ChatGPT](https://chat.openai.com/) to give some command line operations for the grep function. I gave two prompts for chatGPT to output which was "what are some command line operations for grep" and "show me more". The second command was done mainly because I wanted command line operations that were more different and applicable. Below are some screenshots of the output chatGPT gave (specifically the ones  that i used). Utilizing this output, I used what I learned to apply these commands on the technical directory and its files. I also thought about how this can actually be quite practical in other situations as well. 
+
 ![](gpt1.png) 
 ![](gpt2.png) 
+
+
 ## grep -r "term" Directory
 ```
 Wilson@DESKTOP-SCRO0UF MINGW64 ~/OneDrive/Desktop/UCSD/CSE 15L/stringsearch-data/technical (main)
 $ grep -r "telomere fusion" biomed
 biomed/gb-2003-4-8-r50.txt:        telomere fusion between PTR chromosomes 12 and 13,
 ```
--r helps us find certain strings in files found in a directory. Here it is looking for the term "telomere fusion" in the biomed directory. It will provide the relative path to a file containing that string and also the contents of the line that have that string. This command is useful, in giving the users a very quick glimpse as to the context of the usage of this term and also displays where you can find them in the directory. 
+-r helps us find certain strings in files found in a directory. Here it is looking for the term "telomere fusion" in the biomed directory. It will provide the relative path to a file containing that string and also the contents of the line that have that string. This command is useful, in giving the users a very quick glimpse as to the context of the usage of this term and also displays where you can find them in the directory. The main difference between normal grep and grep -r is that the -r allows us to search directories for that word instead of a single file like normal grep. Hence, it helps search large file data bases a lot faster.
 
 ```
 Wilson@DESKTOP-SCRO0UF MINGW64 ~/OneDrive/Desktop/UCSD/CSE 15L/stringsearch-data/technical (main)
@@ -46,7 +49,7 @@ $ grep -l "orangutan" biomed/*
 biomed/gb-2003-4-8-r50.txt
 ```
 
--l will look for files found in a directory for the term and output the files that contain that term. Here it shows the files that follow the pattern of `biomed/*` and contain the term **orangutan** are listed, in this case it was only one file. This is useful if you want to find files that cover or use a particular term, so that you can focus on these files.   
+-l will look for files found in a directory for the term and output the files that contain that term. Here it shows the files that follow the pattern of `biomed/*` and contain the term **orangutan** are listed, in this case it was only one file. This is useful if you want to find files that cover or use a particular term, so that you can focus on these files. I feel that this command is particularly useful in coding, for example if a particular method or class is causing erros, then using this command can help you look for any files affected by that method or class, which significantly reduces the work load by limiting the files you need to check.   
 ```
 Wilson@DESKTOP-SCRO0UF MINGW64 ~/OneDrive/Desktop/UCSD/CSE 15L/stringsearch-data/technical (main)
 $ grep -l "telomere fusion" biomed/*
