@@ -1,5 +1,7 @@
 # Lab Report 3
-For these functions I used [ChatGPT](https://chat.openai.com/) to give some command line operations for the grep function. 
+For these functions I used [ChatGPT](https://chat.openai.com/) to give some command line operations for the grep function. I gave two prompts for chatGPT to output which was "what are some command line operations for grep" and "show me more". The second command was done mainly because I wanted command line operations that were more different and applicable. Below are some screenshots of the output chatGPT gave (specifically the ones  that i used). 
+![](gpt1.png) 
+![](gpt2.png) 
 ## grep -r "term" Directory
 ```
 Wilson@DESKTOP-SCRO0UF MINGW64 ~/OneDrive/Desktop/UCSD/CSE 15L/stringsearch-data/technical (main)
